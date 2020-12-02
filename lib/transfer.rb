@@ -19,13 +19,14 @@ class Transfer
     if !self.valid? || @sender.balance <= @amount
       @status = "rejected"
       @status = "Transaction rejected. Please check your account balance."
-      @status
+    
     elsif @status == "pending"
       BankAccount.all.map do |person|
         if person == @sender
           person.balance -=@amount
         elsif person == @receiver
         person.balance += @amount
+        @status = "complete"
       end
     end
   end
