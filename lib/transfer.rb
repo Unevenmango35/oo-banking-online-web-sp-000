@@ -23,7 +23,7 @@ class Transfer
       BankAccount.all.map do |person|
         if person == @sender
           person.balance -=@amount
-        elseif person == @receiver
+        elsif person == @receiver
         person.balance += @amount
       end
     end
