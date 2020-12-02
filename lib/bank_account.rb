@@ -11,6 +11,10 @@ def initialize(name, balance=1000, status="open")
   @@all << self
 end
 
+def self.all
+  @@all
+end
+
 def deposit(amt)
   @balance += amt
   @balance
