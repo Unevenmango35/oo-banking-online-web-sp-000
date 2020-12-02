@@ -9,6 +9,7 @@ end
 
 def deposit(amt)
   @balance += amt
+  @balance
 end
 
 def display_balance
