@@ -15,5 +15,10 @@ def display_balance
   @balance
 end
 
+def valid?
+  if @status == "open" && @balance > 0
+    then true
+  else false
+  end
 
 end
