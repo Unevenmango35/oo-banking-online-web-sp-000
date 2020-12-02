@@ -8,7 +8,8 @@ def initialize(name)
 end
 
 def deposit(amt)
-  balance += amt
+  @balance += amt
+  @balance
 end
 
 
