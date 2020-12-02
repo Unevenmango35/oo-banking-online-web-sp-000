@@ -19,7 +19,7 @@ class Transfer
     if !self.valid?
       @status = "rejected"
     elsif @sender.balance <= @amount
-      @status = "Transaction rejected. Please check your account balance."
+      
       @status = "rejected"
 
     elsif @status == "pending"
